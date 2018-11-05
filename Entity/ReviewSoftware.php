@@ -19,7 +19,7 @@ class ReviewSoftware
 	protected $updated;
 	/**
 	 * @var int
-	 * @Serializer\Type("array")
+	 * @Serializer\Type("string")
 	 * @Serializer\SerializedName("id")
 	 * @Serializer\Accessor(setter="setIdSource")
 	 */
@@ -94,8 +94,7 @@ class ReviewSoftware
 	
 	
 	public function setIdSource($id){
-		$this->id = $id['attribute_id'];
-		$this->bundleId = $id['attribute_bundleId'];
+		$this->id = $id;
 	}
 
 	public function setLinkSource($link){
